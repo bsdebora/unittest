@@ -1,0 +1,39 @@
+[
+
+    {
+        "name": "Indian Breakfast",
+        "description": "The dishes are light on the stomach, filling and give you enough proteins, carbs and fats to jump start your day in a great way. The recipes are a mix of rice & lentils and served with spicy, tangy sides like chutneys, sambar (a lentil based soup) and so on. Some dishes include: Idli, Dosa, Upma, Idiyappam",
+        "image_source": "static/img/breakfast.png"
+    },
+     {
+        "name": "Veg Thali",
+        "description": "Thali the meal refers to many different dishes (both vegetarian and non-vegetarian),served in small bowls called (Katori in Hindi) arranged on a Thali, or a platter. A flatbread, rice, pickle, salad, and dessert are also included, as is bread (like chapatis).",
+        "image_source": "static/img/lunch thali.jpg"
+    },
+       {
+        "name": "Chicken Biryani",
+        "description": "Our The method of cooking makes hyderabadi biryani unique and delicious. potli masala (mixture of different masalas) makes it so special and spicy and layering of basmati rice and nonveg pieces adds to the taste and covering the lid with dough helps in boiling evenly and it is a blend of Mughlai and Telugu cuisine.",
+        "image_source": "static/img/hyderabadi-chicken-biryani.jpg"
+    },
+     {
+        "name": "Natu Kodi Pulusu",
+        "description": "Natu kodi kura is a delicious and spicy Andhra chicken curry made with a Guntur chilli spice mix and a hint of coconut.Naatu kodi pulusu or country chicken curry tastes good when served with hot rice or Rotis.",
+        "image_source": "static/img/Chicken curry.jpg"
+    },
+      {
+        "name": "Fish Fry",
+        "description": "Flavorful shallow fried sea food recipe with fish made by adding basic dry spices and this fried fish can be used as a starter.",
+        "image_source": "static/img/fish-fry.jpg"
+    },
+        {
+        "name": "Spicy Fish Gravy",
+        "description": "Delicious, flavourful spicy, tangy, fish curry in an onion tomato base. The spicy flavours of this recipe will surely take your food experience up by a notch!",
+        "image_source": "static/img/Hyderabadi Fish Curry.JPG"
+    },
+     {
+        "name": "Mutton Curry",
+        "description": "Rogan josh, also written roghan josh or roghan ghosht, is an aromatic curried meat dish of Persian or Kashmiri origin. It is made with red meat, traditionally lamb or goat. It is coloured and flavoured primarily by alkanet flower or root and Kashmiri chilies. It is one of the signature recipes of Kashmiri cuisine. ",
+        "image_source": "static/img/muttonroganjosh.jpg"
+    }
+
+]
