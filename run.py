@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from flask import Flask, json, redirect, render_template, request, session, url_for
+from flask import Flask, json, redirect, render_template, request, session, url_for, flash
 
 
 app = Flask(__name__)
