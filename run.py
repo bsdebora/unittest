@@ -9,9 +9,11 @@ messages = []
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 
+
 @app.route('/')
 def index():
-    return render_template("index.html",page_title="Ananya Caterers")
+    return render_template("index.html", page_title="Ananya Caterers")
+
 
 def add_message(username, message):
     """Add messages to the `messages` list"""
@@ -34,21 +36,19 @@ def chat():
 @app.route("/chat/<username>", methods=["GET", "POST"])
 def user(username):
     """Add and display chat messages"""
-    if request.method == "POST":    
+    if request.method == "POST":
         username = session["username"]
         message = request.form["message"]
         add_message(username, message)
         return redirect(url_for("user", username=session["username"]))
-
-    return render_template("chat.html", username=username,chat_messages=messages,page_title="Chat with Us")
+    return render_template("chat.html", username=username, chat_messages=messages, page_title="Chat with Us")
 
 
 def writetofile():
-    f=open("AnuChatHistory.txt",'w')
-    f.writelines(add_message)
+    chat_messages = []
+    f = open("AnuChatHistory.txt", 'w')
+    f.writelines(chat_messages)
     f.close()
-    
-
 
 
 @app.route("/ourspecialities")
@@ -63,7 +63,7 @@ def ourspecialities():
 def contact():
     if request.method =="POST":
         flash("Thank you {}, we have recieved your message!".format(request.form["name"]))
-    return render_template("contact.html", page_title = "Contact Us")
+    return render_template ("contact.html", page_title = "Contact Us")
 
 
 @app.route("/careers")
