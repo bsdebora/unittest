@@ -43,6 +43,13 @@ def user(username):
     return render_template("chat.html", username=username,chat_messages=messages,page_title="Chat with Us")
 
 
+def writetofile():
+    f=open("AnuChatHistory.txt",'w')
+    f.writelines(add_message)
+    f.close()
+    
+
+
 
 @app.route("/ourspecialities")
 def ourspecialities():
