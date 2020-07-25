@@ -47,7 +47,7 @@ def user(username):
 def writetofile():
     chat_messages = []
     f = open("AnuChatHistory.txt", 'w')
-    f.writelines(chat_messages)
+    f.writelines("Hi")
     f.close()
 
 
