@@ -19,9 +19,7 @@ def add_message(username, message):
     """Add messages to the `messages` list"""
     now = datetime.now().strftime("%H:%M:%S")
     messages.append({"timestamp": now, "from": username, "message": message})
-    with open ("chathistory.txt", "a") as f:
-        f.write({"timestamp": now, "from": username, "message": message}) 
-        
+    
 
 
 @app.route("/", methods=["GET", "POST"])
