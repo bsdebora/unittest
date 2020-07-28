@@ -27,7 +27,7 @@ def chat():
     """Main page with instructions"""
     if request.method == "POST":
         session["username"] = request.form["username"]
-        f = open("chathistory.txt", 'w')
+       
 
     if "username" in session:
         return redirect(url_for("user", username=session["username"]))
