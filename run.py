@@ -21,11 +21,13 @@ def add_message(username, message):
     messages.append({"timestamp": now, "from": username, "message": message})
 
 
+
 @app.route("/", methods=["GET", "POST"])
 def chat():
     """Main page with instructions"""
     if request.method == "POST":
         session["username"] = request.form["username"]
+        f = open("{{username}}.txt", 'w')
 
     if "username" in session:
         return redirect(url_for("user", username=session["username"]))
@@ -43,12 +45,6 @@ def user(username):
         return redirect(url_for("user", username=session["username"]))
     return render_template("chat.html", username=username, chat_messages=messages, page_title="Chat with Us")
 
-
-def writetofile():
-    chat_messages = []
-    f = open("AnuChatHistory.txt", 'w')
-    f.writelines("Hi")
-    f.close()
 
 
 @app.route("/ourspecialities")
