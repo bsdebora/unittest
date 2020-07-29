@@ -19,21 +19,19 @@ def add_message(username, message):
     """Add messages to the `messages` list"""
     now = datetime.now().strftime("%H:%M:%S")
     messages.append({"timestamp": now, "from": username, "message": message})
+    f = open("chathistory.txt", "a")
     f.writelines(messages.append({"timestamp": now, "from": username, "message": message}))
 
 
 @app.route("/", methods=["GET", "POST"])
 def chat():
-    f=open("chathistory.txt","a")
+ 
     """Main page with instructions"""
     if request.method == "POST":
         session["username"] = request.form["username"]
-       
 
     if "username" in session:
-      
         return redirect(url_for("user", username=session["username"]))
-
     return render_template("index.html")
 
 
