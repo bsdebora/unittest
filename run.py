@@ -24,13 +24,14 @@ def add_message(username, message):
 
 @app.route("/", methods=["GET", "POST"])
 def chat():
+    f=open("chathistory.txt","a")
     """Main page with instructions"""
     if request.method == "POST":
         session["username"] = request.form["username"]
        
 
     if "username" in session:
-        f=open("chathistory.txt","a")
+      
         return redirect(url_for("user", username=session["username"]))
 
     return render_template("index.html")
