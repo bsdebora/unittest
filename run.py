@@ -30,7 +30,7 @@ def chat():
        
 
     if "username" in session:
-        f=open("chathis.txt","a")
+        f=open("chathistory.txt","a")
         return redirect(url_for("user", username=session["username"]))
 
     return render_template("index.html")
