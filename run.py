@@ -19,7 +19,7 @@ def add_message(username, message):
     """Add messages to the `messages` list"""
     now = datetime.now().strftime("%H:%M:%S")
     messages.append({"timestamp": now, "from": username, "message": message})
-    
+    f.writelines(messages.append({"timestamp": now, "from": username, "message": message}))
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -30,6 +30,7 @@ def chat():
        
 
     if "username" in session:
+        f=open("chathistory.txt","a")
         return redirect(url_for("user", username=session["username"]))
 
     return render_template("index.html")
@@ -72,5 +73,5 @@ def careers():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=False)
+            )
 
